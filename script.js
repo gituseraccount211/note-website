@@ -1,44 +1,42 @@
-// Get the elements
+
 const noteTitleInput = document.getElementById('title');
 const noteTextInput = document.getElementById('note');
 const addNoteButton = document.querySelector('.addNote');
 const notesContainer = document.querySelector('.notes-container');
 
-// Initialize the notes array
+
 let notes = [];
 
-// Add event listener to the add note button
+
 addNoteButton.addEventListener('click', () => {
-  // Get the title and note values
+  
   const title = noteTitleInput.value.trim();
   const note = noteTextInput.value.trim();
 
-  // Check if the title and note are not empty
   if (title && note) {
-    // Create a new note object
+
     const newNote = {
       title,
       note
     };
 
-    // Add the new note to the notes array
     notes.push(newNote);
 
-    // Clear the input fields
+
     noteTitleInput.value = '';
     noteTextInput.value = '';
 
-    // Render the new note
+
     renderNotes();
   }
 });
 
-// Render the notes
+
 function renderNotes() {
-  // Clear the notes container
+
   notesContainer.innerHTML = '';
 
-  // Loop through the notes array and create a new note element for each note
+
   notes.forEach((note, index) => {
     const noteElement = document.createElement('div');
     noteElement.className = 'note';

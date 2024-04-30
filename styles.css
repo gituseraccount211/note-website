@@ -97,11 +97,11 @@ hr {
 }
 
 .note {
-  width: 310px;
+  width: 265px;
   background-color: #e6a2a2;
   padding: 10px;
   box-shadow: 10px 10px;
-
+  height: 265px;
 }
 
 .note .delete {
